@@ -6,37 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./_reset.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Paul-Lequeux</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="wrapper-container">
-        <header>
-          <a href="">Paul.</a>
-        </header>
-        <main>
-          <section class="introduction">
-            <h1>Hi,<br/> I'm Paul, web developer</h1>
-            <p>My favorite technologies are React - Node.js - Express</p>
-          </section>
-          <section class="projects">
-            <h2>My first projects</h2>
-            <p>learning new technologies is very important to me, so i always try to bring some new stuff i've never done before in each projects.</p>
-            <div>
-              <h3>Strength-Keeper</h3>
-              <img src="" alt="">
-            </div>
-          </section>
-          <section class="myself">
-            <h2>Me</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, odio voluptatibus. Qui laboriosam deserunt iusto nam provident eos optio animi, dignissimos voluptatem, minima maxime blanditiis labore consequuntur suscipit, praesentium perspiciatis?</p>
-          </section>
-        </main>
-        <footer>
-      
-        </footer>
+    <div class="loader">
+      <div class="loader__container">
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
+        <span class="loader__anim"></span>
       </div>
     </div>
+    <div class="wrapper">
+      <header class="header header__loading">
+        <a class="header__l" href="/">Paul.</a>
+      </header>
+      <main>
+        <section class="introduction">
+          <h1 class="introduction__t">
+            <span class="animated-span">Hi,
+              <span class="whiteline whiteline__intro"></span>
+            </span><br/>
+            <span class="animated-span">I'm Paul,</span><br/>
+            <span class="animated-span">web developer</span>
+          </h1>
+          <div class="introduction__technos">
+            <img class="introduction__technos--techno react" src="./assets/images/React.png" alt="logo react">
+            <img class="introduction__technos--techno node" src="./assets/images/nodejs.png" alt="logo node.js">
+          </div>
+          <span class="words-alone learn">Learn</span>
+        </section>
+        <section class="projects">
+          <h2>
+            <span class="projects__animated--span">
+              My
+              <span class="whiteline whiteline__projects"></span>
+            </span><br/>
+            <span  class="projects__animated--span">projects</span>
+          </h2>
+          <p class="projects__content">Learning new technologies is very important to me, so I always try to bring some new stuff I've never done before in each projects. You can find the biggest one I've done for the moment, I'm currently working on other projects.</p>
+          <div class="projects__container">
+            <div class="projects__container--project">
+              <img class="project__img" src="./assets/images/strengthKeeper.png" alt="">
+              <div class="project__links">
+                <a href="https://github.com/PaulLeqx/StrengthKeeperPublic" class="project__links--link" target="blank">View Code</a>
+                <a href="https://strenght-keeper.netlify.app/" class="project__links--link" target="blank">View App</a>
+              </div>
+            </div>
+          </div>
+          <span class="words-alone words-alone__work">Work</span>
+        </section>
+        <section class="myself">
+          <h2>
+            <span class="me__animated--span">
+              Me
+              <span class="whiteline whiteline__me"></span>
+            </span>
+          </h2>
+          <div class="me__container">
+            <p class="me__content">Started as a self-taught developer in New-Zealand one year ago, i decided to go back at school. I've done a 5 month bootcamp to learn basics as PHP, HTML, CSS, JS then React. I'm now continuing my project as a working student for 3 more years. I'm also interested in making 3D for the web with technologies such as WebGL / ThreeJS / Gsap ...</p>
+          </div>
+          <div class="social">
+            <a href="https://github.com/PaulLeqx" target="blank">
+              <img src="./assets/images/github.png" alt="" class="social__img social__img--github">
+            </a>
+            <a href="https://www.linkedin.com/in/paul-lequeux/" target="blank">
+              <img src="./assets/images/linkedin.png" alt="" class="social__img social__img--linkedin">
+            </a>
+          </div>
+          <span class="words-alone">Focus</span>
+        </section>
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+    <canvas id="nokey"></canvas>
   </body>
-<script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+  <script src="./background.js"></script>
+  <script src="./script.js"></script>
 </html>
