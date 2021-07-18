@@ -40,63 +40,58 @@ gsap.from('.learn', {
 
 //PROJECTS
 
-gsap.fromTo('.projects', {
-  opacity: 0,
-  y:"100%"
-}, {
-  opacity: 1,
-  y: "0%",
-  duration: 1,
-  delay: 5,
+let tl = gsap.timeline({
   scrollTrigger: {
     trigger: '.projects',
     start: 'center bottom'
   }
+});
+
+gsap.from('.words-alone__work', {
+  opacity: 0,
+  duration: 1,
+  delay: 1,
+  scrollTrigger: {
+    trigger: '.projects',
+    start: 'center bottom'
+  }
+});
+
+tl.from(".projects__animated--span", {
+  y: "100%",
+  opacity: 0,
+  duration: .8,
+  stagger: {
+    amount: .8
+  }
 })
-
-// let tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.projects',
-//     start: 'center bottom'
-//   }
-// });
-
-// gsap.from('.words-alone__work', {
-//   display: 'none',
-//   opacity: 0,
-//   duration: 1,
-//   delay: 1,
-//   scrollTrigger: {
-//     trigger: '.projects',
-//     start: 'center bottom'
-//   }
-// });
-
-// tl.from(".projects__animated--span", {
-//   y: "100%",
-//   opacity: 0,
-//   duration: .8,
-//   stagger: {
-//     amount: .8
-//   }
-// })
-// .from('.whiteline__projects', {
-//   width: 0,
-//   duration: .8,
-// })
-// .from('.projects__content', {
-//   duration: .8,
-//   y: "100%",
-//   opacity: 0
-// })
-// .from('.projects__container--project', {
-//   duration: .8,
-//   y: "100%",
-//   opacity: 0
-// })
+.from('.whiteline__projects', {
+  width: 0,
+  duration: .8,
+})
+.from('.projects__content', {
+  duration: .8,
+  y: "100%",
+  opacity: 0
+})
+.from('.projects__container--project', {
+  duration: .8,
+  y: "100%",
+  opacity: 0
+})
 
 //ME
 let tlMe = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.myself',
+    start: 'center bottom'
+  }
+});
+
+gsap.from('.words-alone__focus', {
+  opacity: 0,
+  duration: 1,
+  delay: 1,
   scrollTrigger: {
     trigger: '.myself',
     start: 'center bottom'
